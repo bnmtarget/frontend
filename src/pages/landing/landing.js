@@ -10,9 +10,9 @@ const Landing=()=> {
         <nav>
             <img className='logo' src={pic} alt='' width={350} height={100} />
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a  href="#">Contact</a></li>
+                <li><Link to="/Landing">Home</Link></li>
+                <li><Link to='/AboutUs'>About</Link></li>
+                <li><Link to='/ContactUs'>Contact</Link></li>
                 <li><a  href="#">Profile</a></li>
             </ul>
         </nav>
