@@ -123,9 +123,9 @@ const Table = () => {
     <nav>
             <img className='logo' src={pic} alt='' width={350} height={100} />
             <ul>
-                <li><div>
-  <input type="text" placeholder="Search.."/>
-</div></li>
+                <li><div className='search'>
+                  <input type="text" placeholder="Search.."/>
+                </div></li>
             </ul>
         </nav>
         <div className="add">
