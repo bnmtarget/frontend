@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "fullName": "Ruthvika",
+      "address": "choutuppal",
+      "timings": "04:00pm to 09:00pm",
+      "stores": "Trends",
+      "intrests":"cloths"
+    },
+    {
+      "id": 2,
+      "fullName": "Praveshika",
+      "address": "4 tall town",
+      "timings": "08:00pm to 10:00pm",
+      "stores": "reliance",
+      "intrests":"watch"
+    },
+    {
+      "id": 3,
+      "fullName": "Prathima",
+      "address": "11 lesly road",
+      "timings": "07:00am to 09:00pm",
+      "stores": "kalayan jewelers",
+      "intrests":"gold"
+    }
+  ]

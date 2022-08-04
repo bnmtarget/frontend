@@ -7,6 +7,7 @@ import {  Link } from 'react-router-dom'
 const ContactUS=()=>{
   return (
     <>
+    
       <div className='contact_info'>
       <nav>
             <img className='logo' src={pic} alt='' width={350} height={100} />
@@ -19,8 +20,10 @@ const ContactUS=()=>{
             
         </nav>
         <br></br>
+        <div className='contact_details'>
             {/*Phone number*/}
-              <div className="contact_info_item text-align: center;">
+            <div className='contact_info_item1'>
+              <div className="contact_info_item2 text-align: center;">
                 <img className='logo' src={phone} alt='phone' />
                 <div className='contact_info_content'>
                   <div className='contact_info_title'>
@@ -31,12 +34,13 @@ const ContactUS=()=>{
                   </div>
 
                 </div>
-
+                </div>
               </div>
               <br></br>
               <br></br>
               {/*Email*/}
-              <div className="contact_info_item d-flex justify-content-start">
+              <div className='contact_info_item1'>
+              <div className="contact_info_item2 d-flex justify-content-start">
                 <img className='logo' src={mail} alt='phone' />
                 <div className='contact_info_content'>
                   <div className='contact_info_title'>
@@ -45,6 +49,8 @@ const ContactUS=()=>{
                   <div className='contact_info_text'>
                       shoppal@gmail.com
                   </div>
+            </div>
+            </div>
             </div>
 
 
