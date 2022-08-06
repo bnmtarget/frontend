@@ -1,4 +1,4 @@
-import react from 'react'
+import react, { useEffect } from 'react'
 import MaterialTable from 'material-table'
 const data=[
     {name:'Ruthvika',address:'Choutuppal',timings:'04:00pm to 09:00pm',stores:'Trends',intrests:'western cloths'},
@@ -15,7 +15,7 @@ const columns=[
     {title:'Stores',field:'stores'},
     {title:'Intrests',field:'intrests'}
 ];
-export const Buddie=()=>{
+export const Buddies=()=>{
     
 
 
@@ -30,4 +30,4 @@ export const Buddie=()=>{
     );
 
 }
-export  default Buddie;
+export  default Buddies;

@@ -1,5 +1,5 @@
 
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment,useEffect } from "react";
 import { nanoid } from "nanoid";
 import "./table.css";
 import data from "./mock-data.json";
@@ -8,6 +8,14 @@ import EditableRow from "././Components/EditableRow";
 import pic from '../../assets/logo1.png';
 
 const Table = () => {
+ const [authenticated,setauthenticated]=useState(null);
+  useEffect(()=>
+  {
+    const loggedInUser=localStorage.getItem("authenticated");
+    if(loggedInUser){
+      setauthenticated(loggedInUser);
+    }
+  },[]);
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fullName: "",
