@@ -1,4 +1,5 @@
 import react, { useEffect } from 'react'
+import "./App.css";
 import MaterialTable from 'material-table'
 const data=[
     {name:'Ruthvika',address:'Choutuppal',timings:'04:00pm to 09:00pm',stores:'Trends',intrests:'western cloths'},

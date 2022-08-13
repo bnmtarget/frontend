@@ -79,7 +79,7 @@ const Login=()=>{
         {
             //  setauthenticated(true)
             //  localStorage.setItem("authenticated",true);
-             navigate("/buddies");
+             navigate("/buddiespage");
             console.log("logged in");
         }
         else
@@ -129,6 +129,7 @@ const Login=()=>{
             </Grid>
             
             <label htmlFor="username">Username:</label>
+            <br/>
             <input type="text" 
             id="username" 
             ref={userRef} 
@@ -136,8 +137,9 @@ const Login=()=>{
             
             onChange={(e)=> setUser(e.target.value)} 
             value={user} required/>
-
+            <br/>
 <label htmlFor="password">Password:</label>
+<br/>
             <input type="password" 
             id="password" 
            
@@ -151,6 +153,7 @@ const Login=()=>{
                 />
                 
             }
+            
            label="Remember me"
             />
             <br/>
