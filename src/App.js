@@ -7,6 +7,7 @@ import Login from './pages/login/login';
 import Signup from "./pages/signup/signup";
 import AboutUs from "./pages/aboutus/aboutus";
 import ContactUs from "./pages/contactus/contactus";
+import Profile from "./pages/profile/profile"
 //import Buddie from "./pages/findbuddies/table";
 import Buddie from "./pages/buddies/buddiespage";
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs/>}></Route>
         <Route path="/contactus" element={<ContactUs/>}></Route>
         <Route path="/buddiespage" element={<Buddie/>}></Route>
+        <Route path="/profile" element={<Profile/>}></Route>
       </Routes>
       </BrowserRouter> 
      </>

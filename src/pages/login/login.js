@@ -8,6 +8,7 @@ import AuthContext from '../../context/AuthProvider';
 import {  Link, Redirect, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
 import { Navigate ,Route} from 'react-router-dom';
+import './login.css'
 //import GoogleLogin from "react-google-login";
 
 
@@ -18,7 +19,7 @@ const Login=()=>{
     const {setAuth}=useContext(AuthContext);
     
  
-     const paperStyle={padding :20,height:'70vh',width:290,margin:"20px auto"}
+     const paperStyle={padding :20,height:'70vh',width:365,margin:"20px auto"}
      const avatarStyle={backgroundColor:'#1bbd7e'}
      const btnstyle={margin:'8px 0'}
      const userRef=useRef();
@@ -27,7 +28,6 @@ const Login=()=>{
      const [pwd, setPwd]=useState('');
      const [errMsg, setErrMsg]=useState('');
      const [success,setSuccess]=useState(false);
-    // const [authenticated, setauthenticated]=useState(localStorage.getItem(localStorage.getItem("authenticated")||false));
      useEffect(()=>{
         userRef.current.focus();
      },[])
@@ -39,52 +39,31 @@ const Login=()=>{
      const handleSubmit=async(e)=>{
         e.preventDefault();
         const baseURL = "http://localhost:8080/api/user/"+user;
-        // axios.get(baseURL,{
-        //     'Access-Control-Allow-Origin' : '*',
-        //     'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        //     }
-        // ).then((response) => {
-
-        //     console.log(response.data);
-        //   });
         try{
        const response =await axios.get(baseURL,
           {
             'Access-Control-Allow-Origin' : '*',
             'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
             }
-    // JSON.stringify({emailId: user,password: pwd}),
-    //  {
-    //     headers:{'Content-Type':'application/json'},
-    //     withCredentials:true
-    // }
     );
     console.log(response.status);
     if(response.status===404)
     {
         console.log("User not found");
-        //<Redirect to='/buddies'/>
-        
     }
     else{
     console.log(JSON.stringify(response?.data));
     console.log(user,pwd);
-    //console.log(JSON.stringify(response));
-    //const accessToken=response?.data?.accessToken;
         setAuth({user,pwd});
         setUser('');
         setPwd('');
         setSuccess(true);
         if(pwd===response.data.password)
         {
-            //  setauthenticated(true)
-            //  localStorage.setItem("authenticated",true);
              navigate("/buddiespage");
             console.log("logged in");
         }
         else
-        // { setauthenticated(true);
-        //     localStorage.setItem("authenticated",true);
             
            
             console.log("Credential mismatch!!Please check your username or password");
@@ -93,27 +72,9 @@ const Login=()=>{
         catch(err)
         {
             console.log("User not found");
-            //console.log("Credential mismatch !!please check your username or password");
-            // setauthenticated(true);
-            // localStorage.setItem("authenticated",true);
             navigate("/signup");
-            // if(!err?.response){
-            //     setErrMsg('No server Response');
-            // }
-            // else if(err.response?.status===400){
-            //     setErrMsg('Missing Username or Password');
-            // }else if(err.response?.status===401){
-            //     setErrMsg('Unauthorized');
-            // if(err.response.status==404){
-            //     setErrMsg('Login Failed');
-            //     console.log(errMsg);
-            // }
-            // errRef.current.focus();
-
         }
-    
     } 
-     
     return(
         <div>
         <Grid>
@@ -128,51 +89,72 @@ const Login=()=>{
             <h2>Sign in</h2>
             </Grid>
             
-            <label htmlFor="username">Username:</label>
+            {/* <label htmlFor="username">Username:</label> */}
             <br/>
             <input type="text" 
             id="username" 
             ref={userRef} 
             autoComplete="off"
+            class="form-control" aria-label="Enter your Username.." onfocus="this.placeholder=''" 
+           onblur="this.placeholder='Enter your Username..'"
             
             onChange={(e)=> setUser(e.target.value)} 
-            value={user} required/>
+            value={user} required
+            className="input"
+        placeholder="Enter your Username.."
+            />
             <br/>
-<label htmlFor="password">Password:</label>
-<br/>
+            {/* <label htmlFor="password">Password:</label> */}
+            <br/>
             <input type="password" 
             id="password" 
-           
+
+            ref={userRef} 
+            autoComplete="off"
+            class="form-control" aria-label="Enter your Password.." onfocus="this.placeholder=''" 
+           onblur="this.placeholder='Enter your Password..'"
             onChange={(e)=> setPwd(e.target.value)} 
-            value={pwd} required/>
+            value={pwd} required
+            className="input"
+        placeholder="Enter your Password.."
+            
+            
+            />
+
+
             <FormcontrolLabel
             control={
                 <Checkbox
                 name="checkedB"
                 color="primary"
                 />
-                
             }
-            
            label="Remember me"
             />
             <br/>
-            <Button type='submit' name="submit1" color='primary'variant="contained" style={btnstyle} onClick={handleSubmit} >
+            <Grid align='center' width='300'>
+            <Button type='submit' name="submit1" color='primary' variant="contained"  onClick={handleSubmit} >
             
             Sign in
                 </Button>
-                
-                
-            <Typography>
+                <br/>
+                <br/>
+            
+                <Typography>
                 <a href="#" >
                  Forgot password?
                 </a>
                 </Typography>
-                <Typography>Create your account
+                <br/>
+                <Typography>Create your account :
                 <Link to="/signup" >
                  Sign up
                 </Link>
                 </Typography>
+                </Grid>
+                
+                
+            
                 
             </Paper>
             </form>
