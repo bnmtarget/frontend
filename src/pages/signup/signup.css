@@ -1,120 +1,48 @@
-.wrapper {
-    height: 78vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .form-wrapper {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 25px #555;
-    background-color:whitesmoke;
-  }
-  
-  form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  h1 {
-    text-align: center;
-    width: 100%;
-    color: #111;
-    font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  label {
-    font-size: 1em;
-    margin-bottom: 0.25em;
-    color:black;
-    font-weight: bolder;
-  }
-  
-  input {
-    padding: 10px 10px;
-    border-radius: 5px;
-    outline: none;
-    border: 1px solid #cfcfcf;
-  }
-  
-  input::placeholder {
-    font-size: 1.2em;
-    font-weight: lighter;
-    color: #999;
-  }
-  
-  input.error {
-    border: 1px solid red;
-  }
-  
-  .errorMessage {
-    color: red;
-    font-size: 0.75em;
-    display: relative;
-  }
-  
-  .firstName {
-    margin-right: 1%;
-  }
-  
-  .lastName {
-    margin-left: 1%;
-  }
-  
-  .firstName,
-  .lastName,
-  .email,
-  .password {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  .firstName,
-  .lastName {
-    width: 49%;
-  }
-  
-  .email,
-  .password {
-    width: 100%;
-  }
-  
-  .createAccount {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .createAccount button {
-    background-color:green;
-    color: #fff;
-    border: 2px solid #fff;
-    width: 100%;
-    margin-top: 1em;
-    padding: 8px 0px;
-    font-size: 1em;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    margin-bottom: 0.25em;
-  }
-  
-  .createAccount button:hover {
-    color: #4aa089;
-    background-color: #fff;
-    border: 2px solid lightgreen;
-  }
-  
-  .createAccount small {
-    color:black;
-    font-weight: lighter;
-  }
+input {
+  /* Reset */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 20;
+  outline: 10;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  color: black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* <option> colors */
+  /* Remove focus outline */
+  /* Remove IE arrow */
+  padding-bottom: 2500px;
+}
+input:focus {
+  outline: black;
+}
+input::-ms-expand {
+  display: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+   opacity: 0;
+}
+ 
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+ 
+input:focus:-moz-placeholder {
+   opacity: 0;
+}
+
+input::-webkit-input-placeholder {
+  color:black;
+}

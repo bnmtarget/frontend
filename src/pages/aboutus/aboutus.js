@@ -11,7 +11,7 @@ const AboutUs = () => (
                 <li><Link to="/Landing">Home</Link></li>
                 <li><Link to='/AboutUs'>About</Link></li>
                 <li><Link to='/ContactUs'>Contact</Link></li>
-                <li><a  href="#">Profile</a></li>
+                {/* <li><a  href="#">Profile</a></li> */}
             </ul>
         </nav>
         <h1> Welcome to shop pal</h1> 
