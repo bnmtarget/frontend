@@ -41,7 +41,9 @@ import Signup from "./pages/signup/signup";
 import AboutUs from "./pages/aboutus/aboutus";
 import ContactUs from "./pages/contactus/contactus";
 import Profile from "./pages/profile/profile"
+
 import EditProfile from "./pages/profile/editprofile";
+
 //import Buddie from "./pages/findbuddies/table";
 import Buddie from "./pages/buddies/buddiespage";
 import { useState } from 'react';
@@ -75,7 +77,10 @@ function App() {
         <Route path="/contactus" element={<ContactUs/>}></Route>
         <Route path="/buddiespage" element={<Buddie/>}></Route>
         <Route path="/profile" element={<Profile/>}></Route>
+
         <Route path="/editprofile" element={<EditProfile/>}></Route>
+
+
       </Routes>
       </BrowserRouter> 
      </>

@@ -214,21 +214,19 @@ import Checkbox from '@material-ui/core/Checkbox';
 import AuthContext from '../../context/AuthProvider';
 import {  Link, Redirect, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
-import { Navigate ,Route} from 'react-router-dom';
+
+
 import { ClassNames } from "@emotion/react";
-import Buddie from "../buddies/buddiespage";
-//import './login.css'
-//import GoogleLogin from "react-google-login";
-
-
-const LOGIN_URL='/verification';
-
 const Login =()=>{
     const navigate=useNavigate();
     const {setAuth}=useContext(AuthContext);
     
  
+
      const paperStyle={padding :20,height:'90vh',width:365,margin:"20px auto"}
+
+   
+
      const avatarStyle={backgroundColor:'#1bbd7e'}
      const btnstyle={margin:'8px 0'}
      const userRef=useRef();
@@ -239,7 +237,9 @@ const Login =()=>{
      const [pwd, setPwd]=useState('');
      const [errMsg, setErrMsg]=useState('');
      const [success,setSuccess]=useState(false);
+
      const profileuser = {user};
+
      useEffect(()=>{
         userRef.current.focus();
      },[])
@@ -262,7 +262,9 @@ const Login =()=>{
     if(response.status===404)
     {
         console.log("User not found");
+
         alert("Cannot find a user with the given details!!");
+
     }
     else{
     console.log(JSON.stringify(response?.data));
@@ -277,8 +279,10 @@ const Login =()=>{
             console.log("logged in");
         }
         else
+
             {
         alert("Credential mismatch!!Please check your username or password");
+
            
             console.log("Credential mismatch!!Please check your username or password");
         }
@@ -287,11 +291,14 @@ const Login =()=>{
         catch(err)
         {
             console.log("User not found");
+
             alert("User not registered! Please register to login!!");
             navigate("/signup");
         }
     } 
    
+
+
     return(
         
         <div>
@@ -316,6 +323,7 @@ const Login =()=>{
             id="username" 
             ref={userRef} 
             autoComplete="off"
+
         //     class="form-control" aria-label="Enter your Username.." onfocus="this.placeholder=''" 
         //    onblur="this.placeholder='Enter your Username..'"
         //    className="input"
@@ -334,13 +342,18 @@ const Login =()=>{
           autoComplete="off"
         //     class="form-control" aria-label="Enter your Password.." onfocus="this.placeholder=''" 
         //    onblur="this.placeholder='Enter your Password..'"
+
+        //     class="form-control" aria-label="Enter your Username.." onfocus="this.placeholder=''" 
+        //    onblur="this.placeholder='Enter your Username..'"
+            
             onChange={(e)=> setPwd(e.target.value)} 
             value={pwd} required
-            className="input"
-        placeholder="Enter your Password.."
-            
-            
             />
+            <br/>
+            {/* <label htmlFor="password">Password:</label> */}
+            <br/>
+            
+            
 
 
             <FormcontrolLabel
@@ -353,8 +366,12 @@ const Login =()=>{
            label="Remember me"
             />
             <br/>
-            <Grid align='center' width='300'>
-            <Button type='submit' name="submit1" color='primary' variant="contained" >
+            
+
+            {/* <Button type='submit' name="submit1" color='primary' variant="contained" >cancel</Button> */}
+
+            <Button type='submit' name="submit1" color='primary' variant="contained"  onClick={handleSubmit} >
+
             
             Sign in
                 </Button>
@@ -372,7 +389,7 @@ const Login =()=>{
                  Sign up
                 </Link>
                 </Typography>
-                </Grid>
+                
                 
                 
             

@@ -1,3 +1,4 @@
+
 // //import "./App.css";
 // import axios from "axios";
 // import {  useEffect,useState } from "react";
@@ -188,6 +189,11 @@
 import axios from "axios";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import {fasearch} from '@fortawesome/free-solid-svg-icons'
+
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {fasearch} from '@fortawesome/free-solid-svg-icons'
+
 import {  useEffect,useState } from "react";
 import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
@@ -232,10 +238,12 @@ const Buddie=()=>{
     const classes = useStyles();
    const [rows,setRows]=useState([]);
    const [search,setSearch]=useState('');
+
    const btnstyle={margin:'8px 0'}
   //  const [profileuser,setProfileuser]=useState('');
   //  setProfileuser={dataLoginToBuddie}
    const navigate=useNavigate();
+
     const getUserData=async()=>{
         try{
             const data=await axios.get("http://localhost:8080/api/userprofile");
@@ -255,6 +263,7 @@ const Buddie=()=>{
      },[]);
 
     //  const handleSubmit=async(e)=>{} 
+
     const handleSubmit=()=>{
             navigate("/login");
             // alert('Logout made successfully');
@@ -273,6 +282,10 @@ const Buddie=()=>{
         const handleProfile=()=>{
           navigate("/profile");
         }
+
+
+
+
     return (
         <div className="header">
           <nav>
@@ -281,9 +294,13 @@ const Buddie=()=>{
                 <li><Link to="/Landing">Home</Link></li>
                 <li><Link to='/AboutUs'>About</Link></li>
                 <li><Link to='/ContactUs'>Contact</Link></li>
+
                 {/* <li><Link to='/profile'>Profile</Link></li> */}
                <li> <Button type='submit' name="submit2" color='primary'variant="contained"  style={btnstyle} onClick={handleProfile} >Profile</Button></li>
                 <li><Button type='submit' name="submit1" color='primary'variant="contained"  style={btnstyle} onClick={handleSubmit} >Logout</Button></li>
+
+                
+
             </ul>
         </nav>
         <div className="search">
@@ -305,7 +322,7 @@ const Buddie=()=>{
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            {/* <StyledTableCell>UserId </StyledTableCell> */}
+           
             <StyledTableCell align="center">Email Id</StyledTableCell>
             <StyledTableCell align="center">Mobile Number</StyledTableCell>
             <StyledTableCell align="center">Gender</StyledTableCell>
@@ -314,7 +331,6 @@ const Buddie=()=>{
             <StyledTableCell align="center">Preferred Stores</StyledTableCell>
             <StyledTableCell align="center">Preferred Days</StyledTableCell>
             <StyledTableCell align="center">Preferred Timings</StyledTableCell>
-            {/* <StyledTableCell align="center">Send an invitation</StyledTableCell> */}
           </TableRow>
 
         </TableHead>
@@ -333,8 +349,9 @@ const Buddie=()=>{
               {/* <StyledTableCell component="th" scope="row">
                 {item.userId}
               </StyledTableCell> */}
+
               <StyledTableCell align="center">{item.email}</StyledTableCell>
-              <StyledTableCell align="center">{item.mobile_no}</StyledTableCell>
+                <StyledTableCell align="center">{item.mobile_no}</StyledTableCell>
               <StyledTableCell align="center">{item.gender}</StyledTableCell>
               <StyledTableCell align="center">{item.address}</StyledTableCell>
               <StyledTableCell align="center">{item.prefferedlocations}</StyledTableCell>

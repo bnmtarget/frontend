@@ -15,7 +15,11 @@ const ContactUS=()=>{
                 <li><Link to="/Landing">Home</Link></li>
                 <li><Link to='/AboutUs'>About</Link></li>
                 <li><Link to='/ContactUs'>Contact</Link></li>
+
                 {/* <li><a  href="#">Profile</a></li> */}
+
+                <li><Link to='/profile'>Profile</Link></li>
+
             </ul>
             
         </nav>

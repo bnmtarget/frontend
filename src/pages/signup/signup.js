@@ -1,5 +1,6 @@
 
 
+
 // import React from 'react'
 // import { useEffect, useRef, useState ,useContext} from 'react';
 // import { Grid, Paper, Typography, TextField, Button } from '@material-ui/core'
@@ -169,6 +170,7 @@
 
 
 
+
 import React from 'react'
 import axios from "axios";
 import { useEffect, useRef, useState ,useContext} from 'react';
@@ -179,6 +181,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+
 import {useNavigate } from 'react-router-dom';
 import { ClassNames } from "@emotion/react";
 import PhoneInput from'react-phone-input-2';
@@ -287,6 +290,9 @@ const Signup = () => {
  {
     navigate("/login");
  }
+
+
+
     return (
         <Grid>
              <form className={ClassNames.root} onSubmit={handleSubmit}>
@@ -295,6 +301,7 @@ const Signup = () => {
                     <h2 style={headerStyle}>Sign Up</h2>
                     <Typography variant='caption' gutterBottom>Please fill this form to create an account !</Typography>
                 </Grid>
+
                
                 <TextField label="Name"
                     placeholder='Enter your Name..'
@@ -320,14 +327,26 @@ const Signup = () => {
                  value={email} />
                  <br/>
                    
+                   
+                {/* <label htmlFor="name">Name:</label> */}
+            {/* <input type="text" 
+            placeholder='Enter your Name..'
+            id="username" 
+            autoComplete="off"/>
+            <br/>
+            <br/>
+            {/* <label htmlFor="email">Email:</label> */}
+           
                     <FormControl component="fieldset" style={marginTop}>
-                        <FormLabel component="legend" required >Gender</FormLabel>
+                    <label htmlFor="name">Gender:</label>
+
                         <RadioGroup aria-label="gender" name="gender" style={{ display: 'initial' }}>
                             <FormControlLabel value="female" control={<Radio />} label="Female" onChange={handleChange} />
                             <FormControlLabel value="male" control={<Radio />} label="Male" onChange={handleChange} />
                             <FormControlLabel value="others" control={<Radio />} label="others" onChange={handleChange} />
                         </RadioGroup>
                     </FormControl>
+
                     <br/>
                    <br/>
                     <TextField label="MobileNumber"
@@ -349,25 +368,25 @@ const Signup = () => {
             onChange={(e)=> setPwd(e.target.value)} 
             value={pwd} />
              <br/>
-                   
-                <br/>
-            {/* <input type="password" placeholder="Confirm your password"
-            id="confirmpassword" 
-            required
-            onChange={(e)=> setCpwd(e.target.value)} 
-            value={cpwd} />
-                    <br/> */}
-                   
+               
+            <br/>
+           
+
                     <FormControlLabel
                         control={<Checkbox name="checkedA" />}
                         label="I accept the terms and conditions."
                     />
+
                     <div>
                     <Button variant="contained" onClick={handleClose} >Cancel
                   </Button>
                  
                 <Button type="submit" variant="contained" color="primary">Signup</Button>
                 </div>
+
+                   
+                
+
             </Paper>
             </form>
         </Grid>

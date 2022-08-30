@@ -3,6 +3,7 @@ import './profile.css'
 import pic from '../../assets/logo1.png'
 import prof from '../../assets/profile.png'
 import {  Link } from 'react-router-dom'
+
 import {  useEffect,useState } from "react";
 import axios from "axios";
 import {   useNavigate } from 'react-router-dom';
@@ -43,7 +44,11 @@ const Profile=()=> {
                 <li><Link to="/Landing">Home</Link></li>
                 <li><Link to='/AboutUs'>About</Link></li>
                 <li><Link to='/ContactUs'>Contact</Link></li>
+
                 {/* <li><Link to='/profile'>Profile</Link></li> */}
+
+                <li><Link to='/profile'>Profile</Link></li>
+
             </ul>
         </nav>
 
@@ -56,18 +61,22 @@ const Profile=()=> {
             <div className="card p-3 py-4 ">
                 <div className='float-container'>
                 <div className="float-child text-center">
+
                     <img className='prof' src={prof} alt='profile not found' width="200" class="rounded-circle"/>
                 </div>
                 
                 <div className=" float-child text-center mt-3">
                     
                     <div className="mt-2 mb-0">
+
                         <h5 align='left'>Name:{rows.name} </h5>
                         <h5 align='left'>Email: {rows.email}</h5>
                         <h5 align='left'>Preferred Location: {rows.prefferedlocations} </h5>
                         <h5 align='left'>Preferred Stores: {rows.prefferedstores} </h5>
                         <h5 align='left'>Preferred Timings: {rows.prefferedtimings}</h5>
                         <h5 align='left'>Preferred Days: {rows.preffereddays}</h5>
+
+                       
                         
                     
                     </div>
@@ -75,7 +84,10 @@ const Profile=()=> {
                     
                     <div className="buttons inside">
                         
+
                         <button className="btn btn-outline-primary px-4" onClick={handleEdit}>Edit Profile</button>
+
+
                         
                     </div>
                     
@@ -95,4 +107,8 @@ const Profile=()=> {
   )
 }
 
-export default Profile
+
+ export default Profile;
+
+//export default profile;
+

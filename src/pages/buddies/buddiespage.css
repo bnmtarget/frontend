@@ -2,7 +2,10 @@
     background: linear-gradient(35deg, red, purple);
   } */
 
-  *{
+
+  
+*{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;

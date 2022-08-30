@@ -11,11 +11,17 @@ const AboutUs = () => (
                 <li><Link to="/Landing">Home</Link></li>
                 <li><Link to='/AboutUs'>About</Link></li>
                 <li><Link to='/ContactUs'>Contact</Link></li>
+
                 {/* <li><a  href="#">Profile</a></li> */}
+
+                <li><Link to='/profile'>Profile</Link></li>
+
             </ul>
         </nav>
-        <h1> Welcome to shop pal</h1> 
-         <h3>Find the buddies here!!</h3>
+        <h1 align='center'> Welcome to shop pal</h1> 
+         <h5 align='center'>Find your shopping buddies here!!</h5>
+         <br/>
+         <br/>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu dolor in libero lacinia aliquet. 
             Curabitur ullamcorper lacus eget nisi tincidunt blandit. Phasellus suscipit, dui sed consectetur sodales, 
             sapien tortor pellentesque orci, sit amet faucibus urna magna ac massa. Curabitur quis luctus purus, 
