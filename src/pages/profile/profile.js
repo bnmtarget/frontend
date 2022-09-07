@@ -36,6 +36,14 @@ const Profile=()=> {
         console.log("not");
         navigate("/editprofile");
     }
+    const handlelogout=async()=>{
+        // console.log("not");
+        navigate("/login");
+    }
+    const handleFind=async()=>{
+       // console.log("not");
+        navigate("/buddiespage");
+    }
   return (
     <div className='header'>
         <nav>
@@ -100,8 +108,8 @@ const Profile=()=> {
 
     <div className="buttons hello" >
                         
-                        <button className="btn btn-outline-primary px-4">Logout</button>
-                        <button className="btn btn-primary px-4 ms-3">Find Pal</button>
+                        <button className="btn btn-outline-primary px-4" onClick={handlelogout}>Logout</button>
+                        <button className="btn btn-primary px-4 ms-3" onClick={handleFind}>Find Pal</button>
                     </div>
     </div>
   )

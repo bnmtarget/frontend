@@ -18,7 +18,7 @@ const ContactUS=()=>{
 
                 {/* <li><a  href="#">Profile</a></li> */}
 
-                <li><Link to='/profile'>Profile</Link></li>
+                <li><Link to='/login'>Profile</Link></li>
 
             </ul>
             

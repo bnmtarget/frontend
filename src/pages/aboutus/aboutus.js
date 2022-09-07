@@ -14,7 +14,7 @@ const AboutUs = () => (
 
                 {/* <li><a  href="#">Profile</a></li> */}
 
-                <li><Link to='/profile'>Profile</Link></li>
+                <li><Link to='/login'>Profile</Link></li>
 
             </ul>
         </nav>
@@ -22,13 +22,7 @@ const AboutUs = () => (
          <h5 align='center'>Find your shopping buddies here!!</h5>
          <br/>
          <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu dolor in libero lacinia aliquet. 
-            Curabitur ullamcorper lacus eget nisi tincidunt blandit. Phasellus suscipit, dui sed consectetur sodales, 
-            sapien tortor pellentesque orci, sit amet faucibus urna magna ac massa. Curabitur quis luctus purus, 
-            eu iaculis ex. In ultricies lorem et lobortis porttitor. Nunc lectus sem, tristique id aliquet sit amet,
-             congue eget magna. Aliquam cursus tellus vitae risus finibus sodales. Suspendisse eu sem ut justo gravida
-              molestie eu quis magna. Mauris mi dui, suscipit at tempus ac, tristique et lorem. Aenean in consectetur purus. 
-              Morbi fermentum egestas ligula, eget commodo.
+        <p>Thinking of visiting your favourite stores with someone just like you? ShopPal is your one stop solution to find amazing people with similar interests and preferences. Enter your preferred locations and timings and choose from a customized list of people you want to hang out with. Get started by creating an account today!
         </p>
 
     </div>

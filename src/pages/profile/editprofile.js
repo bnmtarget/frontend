@@ -15,7 +15,13 @@ const EditProfile = () => {
             console.log(data.data);
            // setUsers(data.data);
             setRows(data.data);
+            setPl(data.data.prefferedlocations);
+            setPs(data.data.prefferedstores);
+            setPd(data.data.preffereddays);
+            setPt(data.data.prefferedtimings)
+
         }
+
         catch(e)
         {
             console.log(e);
@@ -42,9 +48,7 @@ const EditProfile = () => {
     // setPd(rows.preffereddays);
      //setPt(rows.prefferedtimings);
     console.log(pl,pt,pd,ps);
-     useEffect(()=>{
-        userRef.current.focus();
-      },[])
+     
       const handleSubmit=async(e)=>{
         e.preventDefault();
         const baseURL = "http://localhost:8080/api/updateprofile/amulya@gmail.com";
@@ -97,7 +101,7 @@ const EditProfile = () => {
                 <input type="text" 
                     variant="filled"
                      //required 
-                     placeholder={rows.prefferedlocations}
+                    
                      id="pl" 
                       ref={userRef} 
                     autoComplete="off"
@@ -107,7 +111,7 @@ const EditProfile = () => {
                    <br/>
                     <label htmlFor='PrefferedTimings'>PrefferedTimings</label>
                     <input type="text" 
-                 placeholder={rows.prefferedtimings}
+                 
                  
                  variant="filled"
                 
@@ -123,7 +127,7 @@ const EditProfile = () => {
                     <label htmlFor="PrefferedStores">PrefferedStores</label>
                     <input type="text" 
                     variant="filled"
-                    placeholder={rows.prefferedstores}
+                   
                   // required
                      id="ps" 
                      ref={userRef} 
@@ -137,7 +141,7 @@ const EditProfile = () => {
             <label htmlFor="PrefferedDays" >PrefferedDays</label>
             <input type="text" 
             //required
-             placeholder={rows.preffereddays}
+           
             id="pd" 
             variant="filled"
             onChange={(e)=> setPd(e.target.value)} 
@@ -156,7 +160,7 @@ const EditProfile = () => {
                     <div>
                     <Button variant="contained" onClick={handleClose} >Cancel
                   </Button>
-                <Button type="submit" variant="contained" color="primary">Edit</Button>
+                <Button type="submit" variant="contained" color="primary">Save</Button>
                 </div>
             </Paper>
             </form>

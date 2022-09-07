@@ -25,7 +25,6 @@ const Landing=()=> {
             <h1>The Smart Way Shopaholics Find Their Buddies</h1>
             <br></br>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
             <Link to='/login'>Find Buddies</Link>
 
